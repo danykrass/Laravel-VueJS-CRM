@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn color="success" @click="showOrderFormDialog = true">Add order</v-btn>
+    <v-btn color="success" @click="showOrderFormDialog=true">Add order</v-btn>
     <div class="selectBox">
       Show per page:
       <select v-model="perPage" @change="fetchOrders(1, perPage)">
@@ -50,7 +50,7 @@
       <v-container>
         <v-row justify="center">
           <v-container class="max-width">
-            <pagination v-model="page" :records="pagination.total" :per-page="perPage" :per-page-options="perPageOptions" @paginate="fetchOrders(page, perPage)" class="my-4"/>
+            <pagination v-model="page" :records="pagination.total" :per-page="perPage" @paginate="fetchOrders(page, perPage)"/>
           </v-container>
         </v-row>
       </v-container>
@@ -168,6 +168,10 @@ export default {
       this.pagination.total = this.orders.length;
       this.pagination.per_page = perPage;
       this.pagination.current_page = page;
+    },
+    handleOrderCreated() {
+      this.fetchOrders(this.page, this.perPage);
+      this.showOrderFormDialog = false;
     },
     handleOrderUpdated() {
       this.fetchOrders(this.page, this.perPage);

@@ -22,19 +22,23 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      path: '/:catchAll(.*)',
+      redirect: '/cpanel/customers',
+    },
+    {
       path: '/cpanel/customers',
       name: 'CustomerList',
       component: CustomerList,
     },
     {
-    path: '/cpanel/customers/create',
-    name: 'CustomerForm',
-    component: CustomerForm,
+      path: '/cpanel/customers/create',
+      name: 'CustomerForm',
+      component: CustomerForm,
     },
     {
-        path: '/cpanel/customers/:id/edit',
-        name: 'CustomerFormEdit',
-        component: CustomerFormEdit,
+      path: '/cpanel/customers/:id/edit',
+      name: 'CustomerFormEdit',
+      component: CustomerFormEdit,
     },
     {
       path: '/cpanel/customers/:id/',
@@ -47,9 +51,9 @@ const router = createRouter({
       component: OrderList,
     },
     {
-    path: '/cpanel/orders/:id/create',
-    name: 'OrderForm',
-    component: OrderForm,
+      path: '/cpanel/orders/:id/create',
+      name: 'OrderForm',
+      component: OrderForm,
     },
     {
       path: '/cpanel/orders/:id/edit',

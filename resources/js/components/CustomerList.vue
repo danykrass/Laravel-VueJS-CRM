@@ -48,7 +48,7 @@
   <v-container>
     <v-row justify="center">
       <v-container class="max-width">
-        <pagination v-model="page" :records="pagination.total" :per-page="perPage" :per-page-options="perPageOptions" @paginate="fetchCustomers" class="my-4"/>
+        <pagination v-model="page" :records="pagination.total" :per-page="pagination.per_page" @paginate="fetchCustomers"/>
       </v-container>
     </v-row>
   </v-container>

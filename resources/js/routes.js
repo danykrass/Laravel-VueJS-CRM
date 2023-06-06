@@ -8,10 +8,6 @@ import OrderEdit from './components/OrderEdit.vue';
 
 const routes = [
   {
-    path: '/',
-    redirect: '/customers',
-  },
-  {
     path: '/customers',
     name: 'CustomerList',
     component: CustomerList,

@@ -27,7 +27,7 @@
       <VueDatePicker
         v-model="due_date"
         :enable-time-picker="true"
-        dark="true"
+        :dark="true"
         placeholder="Due Date"
         teleport-center
       ></VueDatePicker>
