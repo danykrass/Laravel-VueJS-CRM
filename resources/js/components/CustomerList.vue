@@ -215,6 +215,18 @@ export default {
           Swal.fire('Error!', 'An error occurred while getting a list of API customers.', 'error');
         });
     },
+    fetchCustomersFromApi() {
+      axios
+        .get('/api/fetch-customers')
+        .then((response) => {
+          this.fetchCustomers();
+          Swal.fire('Success!', '', 'success');
+        })
+        .catch((error) => {
+          console.error(error);
+          Swal.fire('Error!', 'An error occurred while loading customer data.', 'error');
+        });
+    },
     showCustomerForm() {
       this.showCustomerFormDialog = true;
     },
