@@ -10,7 +10,8 @@
     <v-table>
       <thead>
         <tr>
-          <th>Customer ID</th>
+          <th>Order ID:</th>
+          <th>Name</th>
           <th>Details</th>
           <th>
             <div class="selectBox">
@@ -29,7 +30,8 @@
       </thead>
       <tbody>
         <tr v-for="order in paginatedOrders" :key="order.id">
-          <td>{{ order.customer_id }}</td>
+          <td>{{ order.id }}</td>
+          <td>{{ order.customer.name }}</td>
           <td>{{ order.details }}</td>
           <td>{{ order.status }}</td>
           <td>{{ order.due_date }}</td>

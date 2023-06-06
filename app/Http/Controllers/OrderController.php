@@ -20,7 +20,7 @@ class OrderController extends Controller
 
     public function index(Request $request)
     {
-        $orders = Order::all();
+        $orders = Order::with('customer')->get();
 
         return response()->json($orders);
     }
