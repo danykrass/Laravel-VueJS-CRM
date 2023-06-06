@@ -10,7 +10,7 @@
 ## How to run:
 
 1. Clone the repository to your local machine:
-   git clone https://github.com/danykrass/ox.git.git
+   'git clone https://github.com/danykrass/ox.git'
 
 2. Navigate to the project directory:
    cd <your-repository>
