@@ -34,7 +34,7 @@
    php artisan migrate --seed
 
 9. Build the JavaScript and CSS assets:
-   npm run dev
+   npm run build
 
 10. Start the Laravel development server:
     php artisan serve
