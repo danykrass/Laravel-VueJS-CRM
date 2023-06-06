@@ -25,4 +25,10 @@ export default defineConfig({
             vue: 'vue/dist/vue.esm-bundler.js',
         },
     },
+    build: {
+        outDir: './build',
+        minify: true,
+        sourcemap: true,
+        emptyOutDir: true,
+      },
 });

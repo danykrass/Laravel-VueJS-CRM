@@ -9,11 +9,14 @@
 .env.backup
 .env.production
 .phpunit.result.cache
+package-lock.json
+composer.lock
 Homestead.json
 Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
+phpunit.xml
 /.fleet
 /.idea
 /.vscode
