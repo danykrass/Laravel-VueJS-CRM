@@ -18,9 +18,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/cpanel', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/cpanel/{any}', function () {
-    return view('home');
-})->where('any', '.*');
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/cpanel', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/cpanel/{any}', function () {
+        return view('home');
+    })->where('any', '.*');
+});
